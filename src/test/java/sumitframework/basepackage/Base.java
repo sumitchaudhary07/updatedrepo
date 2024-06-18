@@ -29,8 +29,7 @@ public class Base {
 	public WebDriver initiateDriver() throws IOException
 	{
 		
-		
-		FileInputStream fis=new FileInputStream("\\seleniumframework\\src\\test\\java\\resource\\Global.properties");
+			FileInputStream fis=new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\java\\resource\\Global.properties");
 		 Properties p=new Properties();
 		 p.load(fis);
 		System.out.println(p.getProperty("browser")); 
